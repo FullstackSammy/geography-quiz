@@ -111,7 +111,7 @@ body {
     font-family: 'Bungee spice', sans-serif;
     text-align: center;
     font-size: 15px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     padding: 10px;
 }
 
@@ -125,13 +125,14 @@ body {
     margin-left: 15%;
     font-family: 'Bungee', sans-serif;
     font-size: 10px;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     padding: 5px;
     color: orangered;
 }
 
 .button:hover {
     cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 .score-box {
@@ -177,13 +178,14 @@ footer {
 
     .heading {
         margin-bottom: 8%;
+        font-size: 50px;
     }
     .questions {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .button {
-        font-size: 12px;
+        font-size: 20px;
     }
 
 }
@@ -203,11 +205,13 @@ footer {
         margin-left: 25%;
     }
 
-    .col-6 {
-        width: 25%;
-    }
-
     .button {
         font-size: 20px;
+        margin-bottom: 5%;
     }
+
+    .score-box {
+        margin-top: 2%;
+    }
+
 }
