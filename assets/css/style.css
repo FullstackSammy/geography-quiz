@@ -1,3 +1,29 @@
+/*The Google fonts that I have chosen to use for this projects. Imported from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&display=swap');
+
+/*Animation that zooms in an object and hold it in place*/
+@keyframes hero-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/*Body styling, including standard font-family, background image etc.*/
+body {
+    background-image: url(/assets/images/background.avif);
+    height: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bungee spice', sans-serif;
+    color: orange;
+}
+
+/*Box sizing used for grid layout.*/
 * {
     box-sizing: border-box;
 }
@@ -56,11 +82,35 @@
     width: 100%;
 }
 
-#heading {
+/*The heading text*/
+.heading {
+    width: 100%;
+    margin-bottom: 10%;
+    font-size: 50px;
     text-align: center;
+    overflow: hidden;
 }
 
-#game-box {
+/*The game-box where the questions and answers take place.*/
+.game-box {
     width: 75%;
-    text-align: center;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: rgba(5, 5, 5, 0.5);
+    animation-name: hero-zoom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
+
+.questions {
+    font-family: 'Bungee', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.answers-box {
+    width: 75%;
+    margin: 0 auto;
+}
+
