@@ -145,13 +145,21 @@ function checkAnswer(event) {
     Array.from(answerButtons.children).forEach(button => {
         setRevealClass(button, button.dataset.correct);
     });
+    if (correct) {
+        alert("Hey! You got it right! :D");
+        incrementScore();
+    } else {
+        incrementWrongAnswer();
+        alert('aaw, better luck next time!');
+    }
+
+    startGame();
 }
 
 function setRevealClass(element, correct) {
     removeRevealClass(element);
     if (correct) {
         element.classList.add('correct');
-        incrementScore();
     } else {
         element.classList.add('wrong');
     };
@@ -167,3 +175,7 @@ function incrementScore() {
     document.getElementById('score').innerText = ++defaultScore;
 }
 
+function incrementWrongAnswer() {
+    let defaultScore = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++defaultScore;
+}
