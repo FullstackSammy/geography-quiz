@@ -114,7 +114,7 @@ function startGame() {
 
 
 function setQuestion() {
-    
+    resetState()
     newQuestion(questionsRandom[currentQuestion]);
 }
 
@@ -125,14 +125,19 @@ function newQuestion(question) {
         button.innerText = answer.text;
         button.classList.add("button");
         if (answer.correct) {
-            button.dataset.correct = answer.correct
-            alert('Yay! You were correct!')
+            button.dataset.correct = answer.correct;
         };
         button.addEventListener("click", checkAnswer);
         answerButtons.appendChild(button);
     });
 }
 
+function resetState() {
+    nextButton.classList.add('hide')
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
 
 function checkAnswer(event) {
     const chosenAnswer = event.target;
@@ -140,29 +145,25 @@ function checkAnswer(event) {
     Array.from(answerButtons.children).forEach(button => {
         setRevealClass(button, button.dataset.correct);
     });
-    
 }
 
 function setRevealClass(element, correct) {
-    clearStatusClass(element);
+    removeRevealClass(element);
     if (correct) {
         element.classList.add('correct');
+        incrementScore();
     } else {
         element.classList.add('wrong');
     };
 }
 
 function removeRevealClass(element) {
-    element.classList.renove('correct');
+    element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
 function incrementScore() {
-    
+    let defaultScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++defaultScore;
 }
-
-function incrementWrongScore() {
-    
-}
-
 

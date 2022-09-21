@@ -156,7 +156,7 @@ body {
 
 .button:hover, .start-button:hover {
     cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.5);
+    border: 1px solid red;
 }
 
 .wrong {
@@ -227,7 +227,7 @@ footer {
         font-size: 15px;
     }
 
-    .start-button, .next-button {
+    .start-button {
         width: 10%;
         margin-left: 45%;
     }
@@ -247,7 +247,7 @@ footer {
         font-size: 20px;
     }
 
-    .start-button, .next-button {
+    .start-button {
         width: 10%;
         margin-left: 45%;
     }
@@ -274,7 +274,7 @@ footer {
         margin-bottom: 5%;
     }
 
-    .start-button, .next-button {
+    .start-button {
         width: 10%;
         margin-left: 45%;
     }
