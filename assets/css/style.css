@@ -12,6 +12,7 @@
     }
 }
 
+
 /*Body styling, including standard font-family, background image etc.*/
 body {
     background-image: url(/assets/images/background.jpg);
@@ -119,7 +120,7 @@ body {
     margin-left: 15%;
 }
 
-.button, .start-button {
+.button {
     width: 70%;
     margin-left: 15%;
     font-family: 'Bungee', sans-serif;
@@ -131,9 +132,8 @@ body {
 }
 
 .start-button {
-    text-decoration: none;
-    width: 70%;
-    margin-left: 0 auto;
+    width: 30%;
+    margin-left: 35%;
     font-family: 'Bungee', sans-serif;
     font-size: 20px;
     margin-bottom: 5%;
@@ -142,9 +142,20 @@ body {
     background-color: rgb(75, 38, 1);
 }
 
+
 .button:hover, .start-button:hover {
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.5);
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.correct {
+    background-color: green;
+    color: white;
 }
 
 .score-box {
@@ -167,15 +178,35 @@ footer {
     font-size: 10px;
 }
 
+/*Hides the element with the class.*/
+.hide {
+    display: none;
+}
+
 /*Media querys*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .heading {
+        margin-bottom: 8%;
+    }
+}
+
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .heading {
+        margin-bottom: 8%;
+    }
 
     .questions {
         font-size: 25px;
     }
+
+    
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .heading {
+        margin-bottom: 8%;
+        font-size: 50px;
+    }
 
     .questions {
         font-size: 25px;
@@ -183,6 +214,11 @@ footer {
 
     .button {
         font-size: 15px;
+    }
+
+    .start-button {
+        width: 10%;
+        margin-left: 45%;
     }
 }
 
@@ -200,11 +236,16 @@ footer {
         font-size: 20px;
     }
 
+    .start-button {
+        width: 10%;
+        margin-left: 45%;
+    }
+
 }
 
 @media only screen and (min-width: 1201px) {
     .heading {
-        margin-bottom: 5%;
+        margin-bottom: 8%;
         font-size: 50px;
     }
 
@@ -220,6 +261,11 @@ footer {
     .button {
         font-size: 20px;
         margin-bottom: 5%;
+    }
+
+    .start-button {
+        width: 10%;
+        margin-left: 45%;
     }
 
     .score-box {
