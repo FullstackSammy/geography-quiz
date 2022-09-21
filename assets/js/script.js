@@ -1,10 +1,11 @@
 // constants for elements and event listeners
 const startButton = document.getElementById("start-btn");
+const nextButton = document.getElementById("next-btn");
 const gameBox = document.getElementById("game");
 const questionEl = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
 
-
+//declaring the two variables, so I can assign them in the functions later
 let questionsRandom, currentQuestion;
 
 startButton.addEventListener("click", startGame);
@@ -93,6 +94,8 @@ const questions = [
         ]} 
 ]
 
+
+
 /**
  * Starts the game when the start button is clicked. 
  * hides the start button and starts showing the quiz
@@ -111,15 +114,47 @@ function startGame() {
 
 
 function setQuestion() {
+    
     newQuestion(questionsRandom[currentQuestion]);
 }
 
 function newQuestion(question) {
     questionEl.innerText = question.question;
+    question.answers.forEach(answer => {
+        let button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add("button");
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+            alert('Yay! You were correct!')
+        };
+        button.addEventListener("click", checkAnswer);
+        answerButtons.appendChild(button);
+    });
 }
 
-function checkAnswer() {
+
+function checkAnswer(event) {
+    const chosenAnswer = event.target;
+    const correct = chosenAnswer.dataset.correct;
+    Array.from(answerButtons.children).forEach(button => {
+        setRevealClass(button, button.dataset.correct);
+    });
     
+}
+
+function setRevealClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    };
+}
+
+function removeRevealClass(element) {
+    element.classList.renove('correct');
+    element.classList.remove('wrong');
 }
 
 function incrementScore() {
