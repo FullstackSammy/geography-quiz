@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(event) { 
+
 // constants for elements and event listeners
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
@@ -222,3 +224,5 @@ function incrementQuestionCount() {
     let defaultCount = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = --defaultCount;
 }
+
+});

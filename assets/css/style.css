@@ -24,8 +24,8 @@ body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 97vh;
-    width: 100vw;
+    height: 97%;
+    width: 100%;
     font-family: 'Bungee spice', sans-serif;
     color: orange;
     overflow: hidden;
@@ -149,8 +149,7 @@ body {
 .next-button,
 .start-button {
     width: 30%;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin: 5% 0 0 35%;
     font-family: 'Bungee', sans-serif;
     font-size: 20px;
     margin-bottom: 5%;
