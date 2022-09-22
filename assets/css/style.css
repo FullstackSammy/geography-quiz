@@ -17,6 +17,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 /*Body styling, including standard font-family, background image etc.*/
@@ -24,8 +25,8 @@ body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 97%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     font-family: 'Bungee spice', sans-serif;
     color: orange;
     overflow: hidden;
@@ -114,10 +115,6 @@ body {
     height: fit-content;
     margin: 0 0 0 15%;
     background-color: rgba(2, 0, 0, 0.5);
-    animation-name: hero-zoom;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    overflow: hidden;
 }
 
 .questions {
@@ -149,7 +146,7 @@ body {
 .next-button,
 .start-button {
     width: 30%;
-    margin: 5% 0 0 35%;
+    margin: 2% 0 0 35%;
     font-family: 'Bungee', sans-serif;
     font-size: 20px;
     margin-bottom: 5%;
@@ -243,6 +240,7 @@ body {
     .start-button, .next-button {
         width: 10%;
         margin-left: 45%;
+        margin-top: 2%;
     }
 
     .info-text {
@@ -310,7 +308,8 @@ body {
 
 
     .info-text {
-        padding: 0 50px 0 50px;
+        font-size: 30px;
+        padding: 0 100px 0 100px;
     }
 
     .score-box {
