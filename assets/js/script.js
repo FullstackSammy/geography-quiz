@@ -216,7 +216,7 @@ function incrementScore() {
 }
 
 /**
- * counts how many questions are left.
+ * counts how many questions are left. Starts and 10.
  */
 function incrementQuestionCount() {
     let defaultCount = parseInt(document.getElementById('incorrect').innerText);
