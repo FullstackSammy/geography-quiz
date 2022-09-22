@@ -9,6 +9,10 @@ const answerButtons = document.getElementById("answers");
 let questionsRandom, currentQuestion;
 
 startButton.addEventListener("click", startGame);
+nextButton.addEventListener('click', () => {
+    currentQuestion++
+    setQuestion()
+});
 
 // This Array contains the questions and answers for the game.
 const questions = [
@@ -118,13 +122,18 @@ function setQuestion() {
     newQuestion(questionsRandom[currentQuestion]);
 }
 
+
+/**
+ * randomizes a new question to be put on display.
+ */
 function newQuestion(question) {
     questionEl.innerText = question.question;
     question.answers.forEach(answer => {
-        let button = document.createElement('button');
+        const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add("button");
         if (answer.correct) {
+            //Adds a data attribute to the button element.
             button.dataset.correct = answer.correct;
         };
         button.addEventListener("click", checkAnswer);
@@ -132,13 +141,21 @@ function newQuestion(question) {
     });
 }
 
+/**
+ * resets the form/body to default for every new question.
+ */
 function resetState() {
     nextButton.classList.add('hide')
+    //removes the button placeholders.
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
+/**
+ * Checks whether your choice is correct or incorrect
+ * and then increments to score or incorrect score.
+ */
 function checkAnswer(event) {
     const chosenAnswer = event.target;
     const correct = chosenAnswer.dataset.correct;
@@ -146,16 +163,19 @@ function checkAnswer(event) {
         setRevealClass(button, button.dataset.correct);
     });
     if (correct) {
-        alert("Hey! You got it right! :D");
         incrementScore();
     } else {
         incrementWrongAnswer();
-        alert('aaw, better luck next time!');
     }
-
-    startGame();
+    nextButton.classList.remove("hide")
 }
 
+
+/**
+ * Sets the correct background color to the buttons depending on if they're wrong or right.
+ * this is done by adding the class "correct" and "wrong", to make them recieve the styling in
+ * the css file
+ */
 function setRevealClass(element, correct) {
     removeRevealClass(element);
     if (correct) {

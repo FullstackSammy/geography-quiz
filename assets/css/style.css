@@ -175,9 +175,14 @@ body {
     margin-top: 5%;
 }
 
-span {
+.score {
     font-family: 'Bungee', sans-serif;
-    color: orange;
+    color: green;
+}
+
+.incorrect {
+    font-family: 'Bungee', sans-serif;
+    color: red;
 }
 
 
