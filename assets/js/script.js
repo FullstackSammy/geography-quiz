@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const infoText = document.getElementById('info');
     // This Array contains the questions and answers for the game.
     const questions = [{
-            question: "Which is the Capital of Indonesia?",
+            question: "Which city is the Capital of Indonesia?",
             answers: [{
                     text: "Jakarta",
                     correct: true
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Mongolia?",
+            question: "Which city is the Capital of Mongolia?",
             answers: [{
                     text: "Seoul",
                     correct: false
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Australia?",
+            question: "Which city is the Capital of Australia?",
             answers: [{
                     text: "Sydney",
                     correct: false
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Japan?",
+            question: "Which city is the Capital of Japan?",
             answers: [{
                     text: "Sapporo",
                     correct: false
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Slovakia?",
+            question: "Which city is the Capital of Slovakia?",
             answers: [{
                     text: "Bratislava",
                     correct: true
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Egypt?",
+            question: "Which city is the Capital of Egypt?",
             answers: [{
                     text: "Luxor",
                     correct: false
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Kenya?",
+            question: "Which city is the Capital of Kenya?",
             answers: [{
                     text: "Nairobi",
                     correct: true
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Peru?",
+            question: "Which city is the Capital of Peru?",
             answers: [{
                     text: "Piura",
                     correct: false
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Colombia?",
+            question: "Which city is the Capital of Colombia?",
             answers: [{
                     text: "Cusco",
                     correct: false
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            question: "Which is the Capital of Bulgaria?",
+            question: "Which city is the Capital of Bulgaria?",
             answers: [{
                     text: "Sofia",
                     correct: true
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setQuestion();
         document.getElementById('score').innerText = 0;
-        document.getElementById('incorrect').innerText = 10;
+        document.getElementById('incorrect').innerText = 9;
     }
 
 
