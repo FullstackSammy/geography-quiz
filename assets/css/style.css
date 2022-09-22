@@ -21,7 +21,7 @@
 /*Body styling, including standard font-family, background image etc.*/
 body {
     background-image: url(/assets/images/background.jpg);
-    height: 100vh;
+    height: 97vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,8 +89,18 @@ body {
 /*The heading text*/
 .heading {
     width: 100%;
-    padding: 0 10px 0 10px;
+    margin: 5% 0 10% 0;
+    padding: 0 15px 0 15px;
     font-size: 40px;
+    text-align: center;
+    animation-name: hero-zoom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.info-text {
+    width: 100%;
+    padding: 0 20px 0 20px;
     text-align: center;
     animation-name: hero-zoom;
     animation-duration: 3s;
@@ -121,6 +131,7 @@ body {
     margin-left: 15%;
 }
 
+/*Here starts the styling for the buttons.*/
 .button {
     width: 70%;
     margin-left: 15%;
@@ -163,8 +174,10 @@ body {
     color: white;
 }
 
+
+/*Here starts the styling for the score box, which counts your score and questions left.*/
 .score-box {
-    font-size: 5px;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -178,7 +191,7 @@ body {
     color: red;
 }
 
-
+/*footer*/
 footer {
     width: 100%;
     text-align: center;

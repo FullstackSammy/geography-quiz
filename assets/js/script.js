@@ -4,6 +4,7 @@ const nextButton = document.getElementById("next-btn");
 const gameBox = document.getElementById("game");
 const questionEl = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
+const infoText = document.getElementById('info');
 
 //declaring the two variables, so I can assign them in the functions later
 let questionsRandom, currentQuestion;
@@ -12,6 +13,7 @@ startButton.addEventListener("click", startGame);
 nextButton.addEventListener('click', () => {
     currentQuestion++
     setQuestion()
+    incrementQuestionCount()
 });
 
 // This Array contains the questions and answers for the game.
@@ -107,6 +109,7 @@ const questions = [
 function startGame() {
     startButton.classList.add('hide');
     gameBox.classList.remove('hide');
+    infoText.classList.add('hide')
 
     //I had to look up how to randomize a string which I found here: (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
     questionsRandom = questions.sort(() => Math.random() - 0.5);
@@ -165,8 +168,6 @@ function checkAnswer(event) {
     });
     if (correct) {
         incrementScore();
-    } else {
-        incrementWrongAnswer();
     };
     //This if statement checks if there are any questions left. there is, keep clicking next. if not. show startButton and change its text to "restart".
     if (questionsRandom.length > currentQuestion + 1) {
@@ -202,7 +203,10 @@ function incrementScore() {
     document.getElementById('score').innerText = ++defaultScore;
 }
 
-function incrementWrongAnswer() {
+/**
+ * counts how many questions are left.
+ */
+function incrementQuestionCount() {
     let defaultScore = parseInt(document.getElementById('incorrect').innerText);
-    document.getElementById('incorrect').innerText = ++defaultScore;
+    document.getElementById('incorrect').innerText = --defaultScore;
 }
