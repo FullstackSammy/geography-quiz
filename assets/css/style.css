@@ -12,10 +12,17 @@
     }
 }
 
+/*Box sizing used for grid layout to all elements.*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
 /*Body styling, including standard font-family, background image etc.*/
 body {
     background-image: url(/assets/images/background.jpg);
+    height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Bungee spice', sans-serif;
@@ -23,11 +30,7 @@ body {
     overflow: hidden;
 }
 
-/*Box sizing used for grid layout.*/
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
+
 
 .row::after {
     content: "";
@@ -86,7 +89,6 @@ body {
 /*The heading text*/
 .heading {
     width: 100%;
-    margin: 5% 0 2% 0;
     padding: 0 10px 0 10px;
     font-size: 40px;
     text-align: center;
@@ -99,7 +101,7 @@ body {
 .game-box {
     width: 70%;
     height: fit-content;
-    margin: 5% 0 0 15%;
+    margin: 0 0 0 15%;
     background-color: rgba(2, 0, 0, 0.5);
     animation-name: hero-zoom;
     animation-duration: 3s;
@@ -110,7 +112,6 @@ body {
 .questions {
     font-family: 'Bungee spice', sans-serif;
     text-align: center;
-    margin-bottom: 5%;
     font-size: 15px;
     padding: 10px;
 }
@@ -129,32 +130,25 @@ body {
     padding: 5px;
     color: orangered;
     background-color: rgb(75, 38, 1);
+    border: 1px solid black;
 }
 
-.start-button {
+
+.next-button, .start-button {
     width: 30%;
     margin-left: 35%;
+    margin-top: 5%;
     font-family: 'Bungee', sans-serif;
     font-size: 20px;
     margin-bottom: 5%;
     padding: 5px;
     color: orangered;
     background-color: rgb(75, 38, 1);
-}
-
-.next-button {
-    width: 30%;
-    margin-left: 35%;
-    font-family: 'Bungee', sans-serif;
-    font-size: 20px;
-    margin-bottom: 5%;
-    padding: 5px;
-    color: orangered;
-    background-color: rgb(75, 38, 1);
+    border: 1px solid black;
 }
 
 
-.button:hover, .start-button:hover {
+.button:hover, .start-button:hover, .next-button:hover {
     cursor: pointer;
     border: 1px solid red;
 }
@@ -170,9 +164,8 @@ body {
 }
 
 .score-box {
-    font-size: 15px;
+    font-size: 5px;
     text-align: center;
-    margin-top: 5%;
 }
 
 .score {

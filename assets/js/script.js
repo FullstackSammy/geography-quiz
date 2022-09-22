@@ -17,7 +17,7 @@ nextButton.addEventListener('click', () => {
 // This Array contains the questions and answers for the game.
 const questions = [
     {
-        question: "What is the Capital of Indonesia?",
+        question: "Which is the Capital of Indonesia?",
         answers: [
             {text: "Jakarta", correct: true},
             {text: "Beijing", correct: false},
@@ -25,7 +25,7 @@ const questions = [
             {text: "Baku", correct: false}
         ]},
     {    
-        question: "What is the Capital of Mongolia?",
+        question: "Which is the Capital of Mongolia?",
         answers: [
             {text: "Seoul", correct: false},
             {text: "Tehran", correct: false},
@@ -33,7 +33,7 @@ const questions = [
             {text: "Malé", correct: false}
         ]},
     {    
-        question: "What is the Capital of Australia?",
+        question: "Which is the Capital of Australia?",
         answers: [
             {text: "Sydney", correct: false},
             {text: "Canberra", correct: true},
@@ -41,7 +41,7 @@ const questions = [
             {text: "Bisbane", correct: false}
         ]},
     {    
-        question: "What is the Capital of Japan?",
+        question: "Which is the Capital of Japan?",
         answers: [
             {text: "Sapporo", correct: false},
             {text: "Kyoto", correct: false},
@@ -49,7 +49,7 @@ const questions = [
             {text: "Tokyo", correct: true}
         ]},
     {    
-        question: "What is the Capital of Slovakia?",
+        question: "Which is the Capital of Slovakia?",
         answers: [
             {text: "Bratislava", correct: true},
             {text: "Wien", correct: false},
@@ -57,7 +57,7 @@ const questions = [
             {text: "Prag", correct: false}
         ]},
     {    
-        question: "What is the Capital of Egypt?",
+        question: "Which is the Capital of Egypt?",
         answers: [
             {text: "Luxor", correct: false},
             {text: "Aswan", correct: false},
@@ -65,7 +65,7 @@ const questions = [
             {text: "Alexandria", correct: false}
         ]},
     {    
-        question: "What is the Capital of Kenya?",
+        question: "Which is the Capital of Kenya?",
         answers: [
             {text: "Nairobi", correct: true},
             {text: "Mombasa", correct: false},
@@ -73,7 +73,7 @@ const questions = [
             {text: "Nakuru", correct: false}
         ]},
     {    
-        question: "What is the Capital of Peru?",
+        question: "Which is the Capital of Peru?",
         answers: [
             {text: "Piura", correct: false},
             {text: "Lima", correct: true},
@@ -81,7 +81,7 @@ const questions = [
             {text: "Santiago", correct: false}
         ]},
     {    
-        question: "What is the Capital of Colombia?",
+        question: "Which is the Capital of Colombia?",
         answers: [
             {text: "Cusco", correct: false},
             {text: "Iquitos", correct: false},
@@ -89,7 +89,7 @@ const questions = [
             {text: "Bogota", correct: true}
         ]},
     {   
-        question: "What is the Capital of Bulgaria?",
+        question: "Which is the Capital of Bulgaria?",
         answers: [
             {text: "Sofia", correct: true},
             {text: "Bukarest", correct: false},
@@ -113,6 +113,7 @@ function startGame() {
     currentQuestion = 0;
     
     setQuestion();
+    document.getElementById('score').innerText = 0;
 }
 
 
@@ -166,8 +167,14 @@ function checkAnswer(event) {
         incrementScore();
     } else {
         incrementWrongAnswer();
+    };
+    //This if statement checks if there are any questions left. there is, keep clicking next. if not. show startButton and change its text to "restart".
+    if (questionsRandom.length > currentQuestion + 1) {
+        nextButton.classList.remove("hide")
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide');   
     }
-    nextButton.classList.remove("hide")
 }
 
 
