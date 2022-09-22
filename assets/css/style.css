@@ -20,7 +20,7 @@
 
 /*Body styling, including standard font-family, background image etc.*/
 body {
-    background-image: url(/assets/images/background.jpg);
+    background-image: url(../images/background.jpg);
     height: 97vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@ body {
 /*The heading text*/
 .heading {
     width: 100%;
-    margin: 5% 0 10% 0;
+    margin: 5% 0 5% 0;
     padding: 0 15px 0 15px;
     font-size: 40px;
     text-align: center;
@@ -145,7 +145,8 @@ body {
 }
 
 
-.next-button, .start-button {
+.next-button,
+.start-button {
     width: 30%;
     margin-left: 35%;
     margin-top: 5%;
@@ -159,7 +160,9 @@ body {
 }
 
 
-.button:hover, .start-button:hover, .next-button:hover {
+.button:hover,
+.start-button:hover,
+.next-button:hover {
     cursor: pointer;
     border: 1px solid red;
 }
@@ -208,26 +211,34 @@ footer {
 /*Media querys*/
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .heading {
-        margin-bottom: 8%;
+        margin-bottom: 10%;
+    }
+
+    .info-text {
+        margin-top: 10%;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .heading {
-        margin-bottom: 8%;
+        margin-bottom: 10%;
     }
 
     .questions {
         font-size: 25px;
     }
 
-    
+    .info-text {
+        padding: 0 30px 0 30px;
+    }
+
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .heading {
-        margin-bottom: 8%;
         font-size: 50px;
+        margin-bottom: 10%;
     }
 
     .questions {
@@ -242,14 +253,18 @@ footer {
         width: 10%;
         margin-left: 45%;
     }
+
+    .info-text {
+        padding: 0 30px 0 30px;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
 
     .heading {
-        margin-bottom: 8%;
         font-size: 50px;
     }
+
     .questions {
         font-size: 30px;
     }
@@ -263,11 +278,15 @@ footer {
         margin-left: 45%;
     }
 
+    .info-text {
+        padding: 0 50px 0 50px;
+    }
+
 }
 
 @media only screen and (min-width: 1201px) {
     .heading {
-        margin-bottom: 8%;
+        margin-bottom: 5%;
         font-size: 50px;
     }
 

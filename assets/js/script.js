@@ -5,17 +5,6 @@ const gameBox = document.getElementById("game");
 const questionEl = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
 const infoText = document.getElementById('info');
-
-//declaring the two variables, so I can assign them in the functions later
-let questionsRandom, currentQuestion;
-
-startButton.addEventListener("click", startGame);
-nextButton.addEventListener('click', () => {
-    currentQuestion++
-    setQuestion()
-    incrementQuestionCount()
-});
-
 // This Array contains the questions and answers for the game.
 const questions = [
     {
@@ -99,6 +88,18 @@ const questions = [
             {text: "Kiev", correct: false}
         ]} 
 ]
+startButton.addEventListener("click", startGame);
+nextButton.addEventListener('click', () => {
+    currentQuestion++
+    setQuestion()
+    incrementQuestionCount()
+});
+
+//declaring the two variables, so I can assign them in the functions later
+let questionsRandom, currentQuestion;
+
+
+
 
 
 
@@ -117,10 +118,13 @@ function startGame() {
     
     setQuestion();
     document.getElementById('score').innerText = 0;
+    document.getElementById('incorrect').innerText = 10;
 }
 
 
-
+/**
+ * this functions sets a new randomized question ready. One that has not been used yet.
+ */
 function setQuestion() {
     resetState()
     newQuestion(questionsRandom[currentQuestion]);
@@ -174,7 +178,7 @@ function checkAnswer(event) {
         nextButton.classList.remove("hide")
     } else {
         startButton.innerText = 'Restart'
-        startButton.classList.remove('hide');   
+        startButton.classList.remove('hide');  
     }
 }
 
@@ -193,11 +197,19 @@ function setRevealClass(element, correct) {
     };
 }
 
+
+/**
+ * removes the setReveal function everytime a new question is due.
+ */
 function removeRevealClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
+
+/**
+ * Adds to the score count. This was borrowed from CI (https://github.com/Code-Institute-Org/love-maths)
+ */
 function incrementScore() {
     let defaultScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++defaultScore;
@@ -207,6 +219,6 @@ function incrementScore() {
  * counts how many questions are left.
  */
 function incrementQuestionCount() {
-    let defaultScore = parseInt(document.getElementById('incorrect').innerText);
-    document.getElementById('incorrect').innerText = --defaultScore;
+    let defaultCount = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = --defaultCount;
 }
