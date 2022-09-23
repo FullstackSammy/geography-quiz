@@ -360,7 +360,19 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     function showResult() {
         let currentScore = document.getElementById('score').innerText;
-        document.getElementById('finalScore').innerText = `Well done! You got ${currentScore} correct answers out of a total of 10! Register Highscore Below`;
+        if (currentScore > 5) {
+            document.getElementById('finalScore').innerText = `Your final score is: 
+            ${currentScore}/10
+            
+            Well Done!
+            Register Highscore Below`;
+        } else {
+            document.getElementById('finalScore').innerText =`Your final score is:  
+            ${currentScore}/10 
+
+            Maybe Study a bit more? 
+            Register Highscore Below`;
+        }
     }
 
 });
