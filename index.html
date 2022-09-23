@@ -36,26 +36,21 @@
         </div>
     </div>
     <div class="row">
-        <div id="highScore-box" class="hs-box col-12">
+        <div id="highScores" class="hs-box col-12">
             <h2>HighScore</h2>
-            <ul id="highScores">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+            <ul id="high-li">
             </ul>
         </div>
     </div>
     <div id="register-box" class="reg-box col-12 hide">
-        <div id="finalScore">HEJ</div>
-            <form>
-                <input type="text" name="username" id="username" placeholder="username">
-                <button type="submit" class="save-btn" id="saveBtn" onclick="saveHighScore(event)" disabled>
-                    Save
-                </button>
-            </form>
-            <a class="form-btn" href="index.html">Play Again</a>
+        <div id="finalScore"></div>
+        <form>
+            <input type="text" name="username" id="username" placeholder="username">
+            <button type="submit" class="save-btn" id="save-button" onclick="saveScore(event)">
+                Save
+            </button>
+        </form>
+        <a class="form-btn" href="index.html">Play Again</a>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

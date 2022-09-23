@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const saveButton = document.getElementById("save-button");
     const registerBox = document.getElementById("register-box")
     const gameBox = document.getElementById("game");
-    const highScoreBox = document.getElementById("highScore-box");
+    const highScoreBox = document.getElementById("highScores");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
     const infoText = document.getElementById('info');
     const username = document.getElementById("username");
-    const HighScores = document.getElementById("highScores");
-    const highScore = JSON.parse(localStorage.getItem("highScore-box")) || [];
+    const HighScores = document.getElementById("high-li");
+    const highScore = JSON.parse(localStorage.getItem("highScors")) || [];
     const maxRegScores = 5;
     
     // This Array contains the questions and answers for the game.
@@ -235,9 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
         incrementQuestionCount();
     });
 
-    saveButton.addEventListener("click", () => {
-        alert('Highscore Saved!')
-    });
     //declaring the two variables, so I can assign them in the functions later
     let questionsRandom, currentQuestion;
 
@@ -320,6 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //This if statement checks if there are any questions left. there is, keep clicking next. if not. show startButton and change its text to "restart".
         if (questionsRandom.length > currentQuestion + 1) {
             nextButton.classList.remove("hide");
+            localStorage.setItem('currentScore', score);
         } else {
             resultButton.classList.remove('hide');
         }
@@ -401,7 +399,13 @@ document.addEventListener("DOMContentLoaded", function () {
         highScore.splice(5);
 
         localStorage.setItem('highScore-box', JSON.stringify(highScore));
-        window.location.assign('/')
-    }
+        alert('Highscore Saved!');
+    };
 
+        HighScores.innerHTML = 
+        highScore.map(score => {
+            return `<li class="hs-list">${score.name}-${score.score}</li>`
+        })
+        .join("");
+        
 });
