@@ -100,6 +100,10 @@ body {
     animation-fill-mode: forwards;
 }
 
+.heading a {
+    text-decoration: none;
+}
+
 .info-text {
     width: 100%;
     padding: 0 20px 0 20px;
@@ -115,6 +119,39 @@ body {
     height: fit-content;
     margin: 0 0 0 15%;
     background-color: rgba(2, 0, 0, 0.5);
+}
+
+/*The Highscorebox where highscores are shown*/
+.hs-box {
+    text-align: center;
+    width: 50%;
+    height: fit-content;
+    margin: 0 0 0 25%;
+    background-color: rgba(2, 0, 0, 0.5);
+}
+
+.hs-box h2 {
+    margin: 2% 0 2% 0;
+}
+
+/*Styling for the register of HighscoreBox*/
+.reg-box {
+    text-align: center;
+    width: 40%;
+    height: fit-content;
+    margin: 10% 0 0 30%;
+    background-color: rgba(2, 0, 0, 0.5);
+    animation-name: hero-zoom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#finalScore {
+    font-size: 20px;
+}
+
+input {
+    margin: 5% 0 5% 0;
 }
 
 .questions {
@@ -142,11 +179,26 @@ body {
     border: 1px solid black;
 }
 
+.form-btn {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+
+.form-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.save-btn {
+    margin-bottom: 2%;
+}
+
 
 .next-button,
 .start-button {
-    width: 30%;
-    margin: 2% 0 0 35%;
+    width: 40%;
+    margin: 2% 0 0 30%;
     font-family: 'Bungee', sans-serif;
     font-size: 20px;
     margin-bottom: 5%;
@@ -156,13 +208,14 @@ body {
     border: 1px solid black;
 }
 
-
 .button:hover,
 .start-button:hover,
 .next-button:hover {
     cursor: pointer;
     border: 1px solid red;
 }
+
+
 
 .wrong {
     background-color: red;
@@ -202,6 +255,10 @@ body {
         margin-bottom: 10%;
     }
 
+    .hs-box {
+        margin-top: 5%;
+    }
+
     .info-text {
         margin-top: 10%;
     }
@@ -210,6 +267,20 @@ body {
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .heading {
         margin-bottom: 10%;
+    }
+
+    .hs-box {
+        margin-top: 5%;
+    }
+
+    .next-button,
+    .start-button {
+    width: 20%;
+    margin: 2% 0 0 40%;
+    }
+
+    input, .save-btn, .form-btn {
+        font-size: 17px;
     }
 
     .questions {
@@ -227,6 +298,14 @@ body {
     .heading {
         font-size: 50px;
         margin-bottom: 5%;
+    }
+
+    .hs-box {
+        margin-top: 5%;
+    }
+
+    input, .save-btn, .form-btn {
+        font-size: 20px;
     }
 
     .questions {
@@ -258,17 +337,20 @@ body {
         font-size: 50px;
     }
 
+    .hs-box {
+        margin-top: 5%;
+    }
+
+    input, .save-btn, .form-btn {
+        font-size: 20px;
+    }
+
     .questions {
         font-size: 30px;
     }
 
     .button {
         font-size: 20px;
-    }
-
-    .start-button, .next-button {
-        width: 10%;
-        margin-left: 45%;
     }
 
     .info-text {
@@ -285,6 +367,14 @@ body {
     .heading {
         margin: 2% 0 5% 0;
         font-size: 50px;
+    }
+
+    .hs-box {
+        margin-top: 5%;
+    }
+
+    input, .save-btn, .form-btn {
+        font-size: 30px;
     }
 
     .questions {
