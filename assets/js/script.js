@@ -4,12 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-btn");
     const nextButton = document.getElementById("next-btn");
     const resultButton = document.getElementById('result-btn');
+    const saveButton = document.getElementById("save-button");
     const registerBox = document.getElementById("register-box")
-    const highScoreBox = document.getElementById("highScore-box");
     const gameBox = document.getElementById("game");
+    const highScoreBox = document.getElementById("highScore-box");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
     const infoText = document.getElementById('info');
+    const username = document.getElementById("username");
+    const HighScores = document.getElementById("highScores");
+    const highScore = JSON.parse(localStorage.getItem("highScore-box")) || [];
+    const maxRegScores = 5;
+    
     // This Array contains the questions and answers for the game.
     const questions = [{
         question: "Which city is the Capital of Indonesia?",
@@ -212,6 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     }
     ];
+
+    //Event listeners
     resultButton.addEventListener("click", () => {
         gameBox.classList.add('hide');
         registerBox.classList.remove('hide');
@@ -227,6 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
         incrementQuestionCount();
     });
 
+    saveButton.addEventListener("click", () => {
+        alert('Highscore Saved!')
+    });
     //declaring the two variables, so I can assign them in the functions later
     let questionsRandom, currentQuestion;
 
@@ -359,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * Shows the results box when ran. 
      */
     function showResult() {
-        let currentScore = document.getElementById('score').innerText;
+        let currentScore= document.getElementById('score').innerText;
         if (currentScore > 5) {
             document.getElementById('finalScore').innerText = `Your final score is: 
             ${currentScore}/10
@@ -373,6 +384,24 @@ document.addEventListener("DOMContentLoaded", function () {
             Maybe Study a bit more? 
             Register Highscore Below`;
         }
+    };
+
+    /**
+     * Saves the highscore to the localStorage.
+     */
+    function saveScore(event) {
+        event.preventDefault();
+        const score = {
+            name: username.value,
+            score: document.getElementById('score').innerText
+
+        };
+        highScore.push(score);
+        highScore.sort( (a,b) => b.score - a.score);
+        highScore.splice(5);
+
+        localStorage.setItem('highScore-box', JSON.stringify(highScore));
+        window.location.assign('/')
     }
 
 });
