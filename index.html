@@ -10,16 +10,15 @@
 </head>
 
 <body>
-    <h1 class="heading">Capitals Quiz</h1>
-    <p id="info" class="info-text">There are 10 questions you need to answer. They are all about capitals of the world. Click "start" to begin</p>
+    <h1 class="heading"><a href="index.html">Capitals Quiz</a></h1>
+    <p id="info" class="info-text">There are 10 questions you need to answer. They are all about capitals of the world.
+        Click "start" to begin</p>
     <div class="row">
         <div id="game" class="game-box col-12 hide">
             <div id="question" class="questions">Question</div>
-            <div class="row">
-                <div class="score-box col-12">
-                    <p class="scores">Questions left <span id="incorrect" class="incorrect">0</span></p>
-                    <p class="scores">Correct Answers <span id="score" class="score">0</span></p>
-                </div>
+            <div class="score-box col-12">
+                <p class="scores">Questions left <span id="incorrect" class="incorrect">0</span></p>
+                <p class="scores">Correct Answers <span id="score" class="score">0</span></p>
             </div>
             <div id="answers" class="answers-box col-12">
                 <button class="button">Answer1</button>
@@ -28,10 +27,24 @@
                 <button class="button">Answer4</button>
             </div>
         </div>
-        
+    </div>
+    <div class="row">
         <div class="control-btn col-12">
             <button id="start-btn" class="start-button">Start</button>
             <button id="next-btn" class="next-button hide">Next</button>
+            <button id="result-btn" class="next-button hide">Results</button>
+        </div>
+    </div>
+    <div class="row">
+        <div id="highScore-box" class="hs-box col-12">
+            <h2>HighScore</h2>
+            <ul id="highScores">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
