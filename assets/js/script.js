@@ -3,212 +3,223 @@ document.addEventListener("DOMContentLoaded", function () {
     // constants for elements and event listeners
     const startButton = document.getElementById("start-btn");
     const nextButton = document.getElementById("next-btn");
+    const resultButton = document.getElementById('result-btn');
+    const registerBox = document.getElementById("register-box")
+    const highScoreBox = document.getElementById("highScore-box");
     const gameBox = document.getElementById("game");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
     const infoText = document.getElementById('info');
     // This Array contains the questions and answers for the game.
     const questions = [{
-            question: "Which city is the Capital of Indonesia?",
-            answers: [{
-                    text: "Jakarta",
-                    correct: true
-                },
-                {
-                    text: "Beijing",
-                    correct: false
-                },
-                {
-                    text: "Beirut",
-                    correct: false
-                },
-                {
-                    text: "Baku",
-                    correct: false
-                }
-            ]
+        question: "Which city is the Capital of Indonesia?",
+        answers: [{
+            text: "Jakarta",
+            correct: true
         },
         {
-            question: "Which city is the Capital of Mongolia?",
-            answers: [{
-                    text: "Seoul",
-                    correct: false
-                },
-                {
-                    text: "Tehran",
-                    correct: false
-                },
-                {
-                    text: "Ulaanbaatar",
-                    correct: true
-                },
-                {
-                    text: "Malé",
-                    correct: false
-                }
-            ]
+            text: "Beijing",
+            correct: false
         },
         {
-            question: "Which city is the Capital of Australia?",
-            answers: [{
-                    text: "Sydney",
-                    correct: false
-                },
-                {
-                    text: "Canberra",
-                    correct: true
-                },
-                {
-                    text: "Melbourne",
-                    correct: false
-                },
-                {
-                    text: "Bisbane",
-                    correct: false
-                }
-            ]
+            text: "Beirut",
+            correct: false
         },
         {
-            question: "Which city is the Capital of Japan?",
-            answers: [{
-                    text: "Sapporo",
-                    correct: false
-                },
-                {
-                    text: "Kyoto",
-                    correct: false
-                },
-                {
-                    text: "Osaka",
-                    correct: false
-                },
-                {
-                    text: "Tokyo",
-                    correct: true
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Slovakia?",
-            answers: [{
-                    text: "Bratislava",
-                    correct: true
-                },
-                {
-                    text: "Wien",
-                    correct: false
-                },
-                {
-                    text: "München",
-                    correct: false
-                },
-                {
-                    text: "Prag",
-                    correct: false
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Egypt?",
-            answers: [{
-                    text: "Luxor",
-                    correct: false
-                },
-                {
-                    text: "Aswan",
-                    correct: false
-                },
-                {
-                    text: "Cairo",
-                    correct: true
-                },
-                {
-                    text: "Alexandria",
-                    correct: false
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Kenya?",
-            answers: [{
-                    text: "Nairobi",
-                    correct: true
-                },
-                {
-                    text: "Mombasa",
-                    correct: false
-                },
-                {
-                    text: "Kisumu",
-                    correct: false
-                },
-                {
-                    text: "Nakuru",
-                    correct: false
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Peru?",
-            answers: [{
-                    text: "Piura",
-                    correct: false
-                },
-                {
-                    text: "Lima",
-                    correct: true
-                },
-                {
-                    text: "Arequipa",
-                    correct: false
-                },
-                {
-                    text: "Santiago",
-                    correct: false
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Colombia?",
-            answers: [{
-                    text: "Cusco",
-                    correct: false
-                },
-                {
-                    text: "Iquitos",
-                    correct: false
-                },
-                {
-                    text: "Buenos Aires",
-                    correct: false
-                },
-                {
-                    text: "Bogota",
-                    correct: true
-                }
-            ]
-        },
-        {
-            question: "Which city is the Capital of Bulgaria?",
-            answers: [{
-                    text: "Sofia",
-                    correct: true
-                },
-                {
-                    text: "Bukarest",
-                    correct: false
-                },
-                {
-                    text: "Budapest",
-                    correct: false
-                },
-                {
-                    text: "Kiev",
-                    correct: false
-                }
-            ]
+            text: "Baku",
+            correct: false
         }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Mongolia?",
+        answers: [{
+            text: "Seoul",
+            correct: false
+        },
+        {
+            text: "Tehran",
+            correct: false
+        },
+        {
+            text: "Ulaanbaatar",
+            correct: true
+        },
+        {
+            text: "Malé",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Australia?",
+        answers: [{
+            text: "Sydney",
+            correct: false
+        },
+        {
+            text: "Canberra",
+            correct: true
+        },
+        {
+            text: "Melbourne",
+            correct: false
+        },
+        {
+            text: "Bisbane",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Japan?",
+        answers: [{
+            text: "Sapporo",
+            correct: false
+        },
+        {
+            text: "Kyoto",
+            correct: false
+        },
+        {
+            text: "Osaka",
+            correct: false
+        },
+        {
+            text: "Tokyo",
+            correct: true
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Slovakia?",
+        answers: [{
+            text: "Bratislava",
+            correct: true
+        },
+        {
+            text: "Wien",
+            correct: false
+        },
+        {
+            text: "München",
+            correct: false
+        },
+        {
+            text: "Prag",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Egypt?",
+        answers: [{
+            text: "Luxor",
+            correct: false
+        },
+        {
+            text: "Aswan",
+            correct: false
+        },
+        {
+            text: "Cairo",
+            correct: true
+        },
+        {
+            text: "Alexandria",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Kenya?",
+        answers: [{
+            text: "Nairobi",
+            correct: true
+        },
+        {
+            text: "Mombasa",
+            correct: false
+        },
+        {
+            text: "Kisumu",
+            correct: false
+        },
+        {
+            text: "Nakuru",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Peru?",
+        answers: [{
+            text: "Piura",
+            correct: false
+        },
+        {
+            text: "Lima",
+            correct: true
+        },
+        {
+            text: "Arequipa",
+            correct: false
+        },
+        {
+            text: "Santiago",
+            correct: false
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Colombia?",
+        answers: [{
+            text: "Cusco",
+            correct: false
+        },
+        {
+            text: "Iquitos",
+            correct: false
+        },
+        {
+            text: "Buenos Aires",
+            correct: false
+        },
+        {
+            text: "Bogota",
+            correct: true
+        }
+        ]
+    },
+    {
+        question: "Which city is the Capital of Bulgaria?",
+        answers: [{
+            text: "Sofia",
+            correct: true
+        },
+        {
+            text: "Bukarest",
+            correct: false
+        },
+        {
+            text: "Budapest",
+            correct: false
+        },
+        {
+            text: "Kiev",
+            correct: false
+        }
+        ]
+    }
     ];
+    resultButton.addEventListener("click", () => {
+        gameBox.classList.add('hide');
+        registerBox.classList.remove('hide');
+        showResult();
+        resultButton.classList.add("hide");
+
+
+    });
     startButton.addEventListener("click", startGame);
     nextButton.addEventListener("click", () => {
         currentQuestion++;
@@ -231,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function startGame() {
         startButton.classList.add('hide');
         gameBox.classList.remove('hide');
+        highScoreBox.classList.add('hide');
         infoText.classList.add('hide');
 
         //I had to look up how to randomize a string which I found here: (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
@@ -298,8 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionsRandom.length > currentQuestion + 1) {
             nextButton.classList.remove("hide");
         } else {
-            startButton.innerText = 'Restart';
-            startButton.classList.remove('hide');
+            resultButton.classList.remove('hide');
         }
     }
 
@@ -342,6 +353,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function incrementQuestionCount() {
         let defaultCount = parseInt(document.getElementById('incorrect').innerText);
         document.getElementById('incorrect').innerText = --defaultCount;
+    }
+
+    /**
+     * Shows the results box when ran. 
+     */
+    function showResult() {
+        let currentScore = document.getElementById('score').innerText;
+        document.getElementById('finalScore').innerText = `Well done! You got ${currentScore} correct answers out of a total of 10! Register Highscore Below`;
     }
 
 });
