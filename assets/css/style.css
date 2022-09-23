@@ -147,7 +147,9 @@ body {
 }
 
 #finalScore {
-    font-size: 10px;
+    font-size: 12px;
+    margin: 2% 0 2% 0;
+    letter-spacing: 1px;
 }
 
 input {
@@ -182,16 +184,22 @@ input {
 .form-btn {
     text-align: center;
     text-decoration: none;
-    margin-bottom: 5%;
 }
 
 .form-btn:hover {
     cursor: pointer;
-    color: red;
+    text-decoration: underline 1px red;
 }
 
 .save-btn {
     margin-bottom: 2%;
+    color: orangered;
+    background-color: rgb(75, 38, 1);
+}
+
+.save-btn:hover {
+    cursor: pointer;
+    background-color: red;
 }
 
 
@@ -256,7 +264,7 @@ input {
     }
 
     .hs-box {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     .info-text {
@@ -270,7 +278,7 @@ input {
     }
 
     .hs-box {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     .next-button,
@@ -300,8 +308,12 @@ input {
         margin-bottom: 5%;
     }
 
+    #finalScore {
+        font-size: 15px;
+    }
+
     .hs-box {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     input, .save-btn, .form-btn {
@@ -337,8 +349,12 @@ input {
         font-size: 50px;
     }
 
+    #finalScore {
+        font-size: 20px;
+    }
+
     .hs-box {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     input, .save-btn, .form-btn {
@@ -369,8 +385,12 @@ input {
         font-size: 50px;
     }
 
+    #finalScore {
+        font-size: 20px;
+    }
+
     .hs-box {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     input, .save-btn, .form-btn {
