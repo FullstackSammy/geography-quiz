@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // constants for elements and event listeners
     const startButton = document.getElementById("start-btn");
     const nextButton = document.getElementById("next-btn");
+    const sendButton = document.getElementById("send");
     const resultButton = document.getElementById('result-btn');
     const resultBox = document.getElementById("results-box")
     const gameBox = document.getElementById("game-box");
@@ -230,6 +231,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     startButton.addEventListener("click", startGame);
+
+    sendButton.addEventListener("click", () => {
+        const userName = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const currentScore = document.getElementById('score').innerText
+        var templateParams = {
+            username: userName,
+            email: email,
+            score: currentScore
+        };
+        if (userName === "" || email === "") {
+            alert('Please type a username and email');
+        } else {
+            emailjs.send("service_ie8ap9o", "template_xcpz6ol", templateParams, "R6A6UlPYHLb2KXBMs").
+        then(function() {
+            alert('Email with Highscore sent to your email!');
+            document.getElementById("username").value = "";
+            document.getElementById("email").value = "";
+         }, function(error) {
+            alert('FAILED...', error);
+         });
+        }
+    })
 
     //declaring the two variables, so I can assign them in the functions later
     let questionsRandom, currentQuestion;

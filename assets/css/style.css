@@ -242,6 +242,14 @@ input {
     .info-text {
         margin-top: 10%;
     }
+
+    .button {
+        font-size: 10px;
+    }
+
+    .nav-btn {
+        font-size: 10px;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
