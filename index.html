@@ -14,7 +14,7 @@
     <p id="info" class="info-text">There are 10 questions you need to answer. They are all about capitals of the world.
         Click "start" to begin</p>
     <div class="row">
-        <div id="game" class="game-box col-12 hide">
+        <div id="game-box" class="game-box col-12 hide">
             <div id="question" class="questions">Question</div>
             <div class="score-box col-12">
                 <p class="scores">Questions left <span id="incorrect" class="incorrect">0</span></p>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="row">
-        <div id="highScores" class="hs-box col-12">
+        <div id="highScore-box" class="hs-box col-12">
             <h2>HighScore</h2>
             <ul id="high-li">
             </ul>
@@ -46,7 +46,7 @@
         <div id="finalScore"></div>
         <form>
             <input type="text" name="username" id="username" placeholder="username">
-            <button type="submit" class="save-btn" id="save-button" onclick="saveScore(event)">
+            <button type="submit" class="save-btn" id="save-button">
                 Save
             </button>
         </form>
