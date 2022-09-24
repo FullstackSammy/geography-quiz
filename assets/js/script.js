@@ -393,11 +393,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentScore > 5) {
             document.getElementById('finalScore').innerText = `Your final score is: 
             ${currentScore}/10
-            Well Done!`;
+            Well Done!
+            Fill out the form below and get an email with your score!`;
         } else {
             document.getElementById('finalScore').innerText = `Your final score is:  
             ${currentScore}/10 
-            Maybe Study a bit more?`;
+            Maybe Study a bit more?
+            Fill out the form below and get an email with your score!`;
         }
     };
 });
