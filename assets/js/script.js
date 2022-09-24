@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // constants for elements and event listeners
+    const infoText = document.getElementById('info');
     const startButton = document.getElementById("start-btn");
     const nextButton = document.getElementById("next-btn");
     const sendButton = document.getElementById("send");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameBox = document.getElementById("game-box");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
-    const infoText = document.getElementById('info');
+    
 
     // This Array contains the questions and answers for the game.
     const questions = [{

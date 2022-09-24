@@ -12,11 +12,14 @@
 </head>
 
 <body>
+    <!--This is the heading of the page and it links to the index.html file-->
     <h1 class="heading"><a href="index.html">Capitals Quiz</a></h1>
-    <p id="info" class="info-text">There are 10 questions you need to answer. <br>They are all about capitals of
+
+    <p id="info" class="info-text" aria-label="information text about the game.">Welcome!<br>This is a Quiz containing 10 questions.<br>They are all about capitals of
         the world.
         <br>Click "start" to begin</p>
     <div class="row">
+        <!--This is the main game-box. Which displays the questions and answers-->
         <div id="game-box" class="game-box col-12 hide">
             <div id="question" class="questions">Question</div>
             <div class="score-box col-12">
@@ -32,14 +35,17 @@
         </div>
     </div>
     <div class="row">
+        <!--These are the navigation buttons. There is a button for next question, to see the results and to start the game-->
         <div class="control-btn col-12">
             <button id="start-btn" class="nav-btn">Start</button>
             <button id="next-btn" class="nav-btn hide">Next</button>
             <button id="result-btn" class="nav-btn hide">Results</button>
         </div>
     </div>
+    <!--This is the results box. Where you can see your results and send the result to your email.-->
     <div id="results-box" class="reg-box col-12 hide">
         <div id="finalScore"></div>
+        <!--The email form-->
         <form>
             <input type="text" name="username" id="username" class="form" placeholder="Name">
             <input type="email" name="email_address" id="email" class="form "placeholder="Email"><br>

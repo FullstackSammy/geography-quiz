@@ -137,6 +137,7 @@ body {
 }
 
 #finalScore {
+    font-family: 'Bungee spice', sans-serif;
     font-size: 12px;
     margin: 2% 0 2% 0;
     letter-spacing: 1px;
@@ -322,8 +323,12 @@ body {
         font-size: 15px;
     }
 
-    .form, .form-btn {
+    .form {
         font-size: 20px;
+    }
+
+    .form-btn {
+        font-size: 25px;
     }
     
     .send-btn {
@@ -364,8 +369,12 @@ body {
         font-size: 20px;
     }
 
-    .form, .form-btn {
+    .form {
         font-size: 20px;
+    }
+
+    .form-btn {
+        font-size: 25px;
     }
     
     .send-btn {
@@ -408,8 +417,12 @@ body {
         font-size: 20px;
     }
 
-    .form, .form-btn {
+    .form{
         font-size: 20px;
+    }
+
+    .form-btn {
+        font-size: 25px;
     }
     
     .send-btn {
