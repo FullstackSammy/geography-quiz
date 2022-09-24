@@ -95,6 +95,7 @@ body {
     padding: 0 15px 0 15px;
     font-size: 40px;
     text-align: center;
+    letter-spacing: 1px;
     animation-name: hero-zoom;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -121,25 +122,14 @@ body {
     background-color: rgba(2, 0, 0, 0.5);
 }
 
-/*The Highscorebox where highscores are shown*/
-.hs-box {
-    text-align: center;
-    width: 50%;
-    height: fit-content;
-    margin: 0 0 0 25%;
-    background-color: rgba(2, 0, 0, 0.5);
-}
-
-.hs-box h2 {
-    margin: 2% 0 2% 0;
-}
-
 /*Styling for the register of HighscoreBox*/
 .reg-box {
+    font-family: 'bungee', sans-serif;
     text-align: center;
-    width: 40%;
+    width: 70%;
     height: fit-content;
-    margin: 10% 0 0 30%;
+    margin: 10% 0 0 15%;
+    color: orangered;
     background-color: rgba(2, 0, 0, 0.5);
     animation-name: hero-zoom;
     animation-duration: 3s;
@@ -181,34 +171,17 @@ input {
     border: 1px solid black;
 }
 
-.form-btn {
-    text-align: center;
-    text-decoration: none;
-}
-
 .form-btn:hover {
     cursor: pointer;
     text-decoration: underline 1px red;
 }
 
-.save-btn {
-    margin-bottom: 2%;
-    color: orangered;
-    background-color: rgb(75, 38, 1);
-}
-
-.save-btn:hover {
-    cursor: pointer;
-    background-color: red;
-}
-
-
-.next-button,
-.start-button {
-    width: 40%;
-    margin: 2% 0 0 30%;
+/*Next-button, Start-button and Results-button*/
+.nav-btn {
+    width: 20%;
+    margin: 2% 0 0 40%;
     font-family: 'Bungee', sans-serif;
-    font-size: 20px;
+    font-size: 10px;
     margin-bottom: 5%;
     padding: 5px;
     color: orangered;
@@ -217,8 +190,7 @@ input {
 }
 
 .button:hover,
-.start-button:hover,
-.next-button:hover {
+.nav-btn:hover {
     cursor: pointer;
     border: 1px solid red;
 }
@@ -281,14 +253,14 @@ input {
         margin-top: 2%;
     }
 
-    .next-button,
-    .start-button {
-    width: 20%;
-    margin: 2% 0 0 40%;
+    .button {
+        font-size: 15px;
     }
 
-    input, .save-btn, .form-btn {
-        font-size: 17px;
+    .nav-btn {
+        font-size: 15px;
+        width: 20%;
+        margin: 2% 0 0 40%;
     }
 
     .questions {
@@ -297,6 +269,7 @@ input {
 
     .info-text {
         padding: 0 30px 0 30px;
+        font-size: 20px;
     }
 
 
@@ -312,30 +285,23 @@ input {
         font-size: 15px;
     }
 
-    .hs-box {
-        margin-top: 2%;
-    }
-
-    input, .save-btn, .form-btn {
-        font-size: 20px;
-    }
-
     .questions {
         font-size: 20px;
     }
 
     .button {
-        font-size: 8px;
+        font-size: 15px;
     }
 
-    .start-button, .next-button {
+    .nav-btn {
+        font-size: 15px;
         width: 10%;
-        margin-left: 45%;
-        margin-top: 2%;
+        margin: 2% 0 0 45%;
     }
 
     .info-text {
         padding: 0 50px 0 50px;
+        font-size: 25px;
     }
 
     .score-box {
@@ -353,14 +319,6 @@ input {
         font-size: 20px;
     }
 
-    .hs-box {
-        margin-top: 2%;
-    }
-
-    input, .save-btn, .form-btn {
-        font-size: 20px;
-    }
-
     .questions {
         font-size: 30px;
     }
@@ -369,8 +327,15 @@ input {
         font-size: 20px;
     }
 
+    .nav-btn {
+        font-size: 20px;
+        width: 10%;
+        margin-left: 45%;
+    }
+
     .info-text {
         padding: 0 50px 0 50px;
+        font-size: 25px;
     }
 
     .score-box {
@@ -408,10 +373,10 @@ input {
 
     .button {
         font-size: 20px;
-        margin-bottom: 5%;
     }
 
-    .start-button, .next-button {
+    .nav-btn {
+        font-size: 20px;
         width: 10%;
         margin-left: 45%;
     }

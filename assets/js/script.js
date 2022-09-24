@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-btn");
     const nextButton = document.getElementById("next-btn");
     const resultButton = document.getElementById('result-btn');
-    const saveButton = document.getElementById("save-button");
-    const registerBox = document.getElementById("register-box")
+    const resultBox = document.getElementById("results-box")
     const gameBox = document.getElementById("game-box");
-    const highScoreBox = document.getElementById("highScore-box");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
     const infoText = document.getElementById('info');
@@ -218,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Event listeners
     resultButton.addEventListener("click", () => {
         gameBox.classList.add('hide');
-        registerBox.classList.remove('hide');
+        resultBox.classList.remove('hide');
         showResult();
         resultButton.classList.add("hide");
 
@@ -248,7 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function startGame() {
         startButton.classList.add('hide');
         gameBox.classList.remove('hide');
-        highScoreBox.classList.add('hide');
         infoText.classList.add('hide');
 
         //I had to look up how to randomize a string which I found here: (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
@@ -370,15 +367,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentScore > 5) {
             document.getElementById('finalScore').innerText = `Your final score is: 
             ${currentScore}/10
-            
-            Well Done!
-            Register Highscore Below`;
+            Well Done!`;
         } else {
             document.getElementById('finalScore').innerText = `Your final score is:  
             ${currentScore}/10 
-
-            Maybe Study a bit more? 
-            Register Highscore Below`;
+            Maybe Study a bit more?`;
         }
     };
 });

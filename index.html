@@ -11,8 +11,8 @@
 
 <body>
     <h1 class="heading"><a href="index.html">Capitals Quiz</a></h1>
-    <p id="info" class="info-text">There are 10 questions you need to answer. They are all about capitals of the world.
-        Click "start" to begin</p>
+    <p id="info" class="info-text">There are 10 questions you need to answer. <br>They are all about capitals of the world.
+        <br>Click "start" to begin</p>
     <div class="row">
         <div id="game-box" class="game-box col-12 hide">
             <div id="question" class="questions">Question</div>
@@ -30,26 +30,13 @@
     </div>
     <div class="row">
         <div class="control-btn col-12">
-            <button id="start-btn" class="start-button">Start</button>
-            <button id="next-btn" class="next-button hide">Next</button>
-            <button id="result-btn" class="next-button hide">Results</button>
+            <button id="start-btn" class="nav-btn">Start</button>
+            <button id="next-btn" class="nav-btn hide">Next</button>
+            <button id="result-btn" class="nav-btn hide">Results</button>
         </div>
     </div>
-    <div class="row">
-        <div id="highScore-box" class="hs-box col-12">
-            <h2>HighScore</h2>
-            <ul id="high-li">
-            </ul>
-        </div>
-    </div>
-    <div id="register-box" class="reg-box col-12 hide">
+    <div id="results-box" class="reg-box col-12 hide">
         <div id="finalScore"></div>
-        <form>
-            <input type="text" name="username" id="username" placeholder="username">
-            <button type="submit" class="save-btn" id="save-button">
-                Save
-            </button>
-        </form>
         <a class="form-btn" href="index.html">Play Again</a>
     </div>
     <script src="assets/js/script.js"></script>
