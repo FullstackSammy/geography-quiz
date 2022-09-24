@@ -22,6 +22,7 @@
 
 /*Body styling, including standard font-family, background image etc.*/
 body {
+    /*Image is totally free for usage and taken from (https://unsplash.com/photos/Q1p7bh3SHj8)*/
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +34,7 @@ body {
 }
 
 
-
+/*The grid used */
 .row::after {
     content: "";
     clear: both;
@@ -104,7 +105,7 @@ body {
 .heading a {
     text-decoration: none;
 }
-
+/*The information text*/
 .info-text {
     width: 100%;
     padding: 0 20px 0 20px;
@@ -122,6 +123,18 @@ body {
     background-color: rgba(2, 0, 0, 0.5);
 }
 
+.questions {
+    font-family: 'Bungee spice', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.answers-box {
+    width: 70%;
+    margin-left: 15%;
+}
+
 /*Styling for the registerbox*/
 .reg-box {
     font-family: 'bungee', sans-serif;
@@ -136,6 +149,7 @@ body {
     animation-fill-mode: forwards;
 }
 
+/*The result text*/
 #finalScore {
     font-family: 'Bungee spice', sans-serif;
     font-size: 12px;
@@ -143,6 +157,7 @@ body {
     letter-spacing: 1px;
 }
 
+/*The email form*/
 .form {
     color: black;
     font-size: 15px;
@@ -151,18 +166,6 @@ body {
 
 .form:hover {
     border: 2px solid orangered;
-}
-
-.questions {
-    font-family: 'Bungee spice', sans-serif;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-}
-
-.answers-box {
-    width: 70%;
-    margin-left: 15%;
 }
 
 /*Here starts the styling for the buttons.*/
@@ -195,6 +198,7 @@ body {
     color: red;
 }
 
+/*The "play again" button*/
 .form-btn {
     font-family: 'Bungee spice', sans-serif;
     color: orangered;
@@ -226,7 +230,7 @@ body {
 }
 
 
-
+/*These styles gets added via Javascript, to show whether the result of your answers are right or wrong*/
 .wrong {
     background-color: red;
     color: white;
@@ -259,7 +263,7 @@ body {
     display: none;
 }
 
-/*Media querys*/
+/*Media querys for responsiveness*/
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .heading {
         margin-bottom: 10%;
