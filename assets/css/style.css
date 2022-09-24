@@ -128,7 +128,7 @@ body {
     text-align: center;
     width: 70%;
     height: fit-content;
-    margin: 10% 0 0 15%;
+    margin: 5% 0 0 15%;
     color: orangered;
     background-color: rgba(2, 0, 0, 0.5);
     animation-name: hero-zoom;
