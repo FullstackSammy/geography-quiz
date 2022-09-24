@@ -122,7 +122,7 @@ body {
     background-color: rgba(2, 0, 0, 0.5);
 }
 
-/*Styling for the register of HighscoreBox*/
+/*Styling for the registerbox*/
 .reg-box {
     font-family: 'bungee', sans-serif;
     text-align: center;
@@ -142,8 +142,14 @@ body {
     letter-spacing: 1px;
 }
 
-input {
-    margin: 5% 0 5% 0;
+.form {
+    color: black;
+    font-size: 15px;
+    border: 1px solid orangered;
+}
+
+.form:hover {
+    border: 2px solid orangered;
 }
 
 .questions {
@@ -169,6 +175,29 @@ input {
     color: orangered;
     background-color: rgb(75, 38, 1);
     border: 1px solid black;
+}
+
+.send-btn {
+    font-family: 'Bungee', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: rgb(75, 38, 1, 0.5);
+    color: orangered;
+    border-radius: 2px;
+    margin-bottom: 5%;
+}
+
+.send-btn:hover {
+    cursor: pointer;
+    text-decoration: underline 1px red;
+    background-color: white;
+    color: red;
+}
+
+.form-btn {
+    font-family: 'Bungee spice', sans-serif;
+    color: orangered;
+    text-decoration: none;
 }
 
 .form-btn:hover {
@@ -293,6 +322,14 @@ input {
         font-size: 15px;
     }
 
+    .form, .form-btn {
+        font-size: 20px;
+    }
+    
+    .send-btn {
+        font-size: 15px;
+    }
+
     .questions {
         font-size: 20px;
     }
@@ -326,6 +363,15 @@ input {
     #finalScore {
         font-size: 20px;
     }
+
+    .form, .form-btn {
+        font-size: 20px;
+    }
+    
+    .send-btn {
+        font-size: 13px;
+    }
+
 
     .questions {
         font-size: 30px;
@@ -362,12 +408,12 @@ input {
         font-size: 20px;
     }
 
-    .hs-box {
-        margin-top: 2%;
+    .form, .form-btn {
+        font-size: 20px;
     }
-
-    input, .save-btn, .form-btn {
-        font-size: 30px;
+    
+    .send-btn {
+        font-size: 13px;
     }
 
     .questions {

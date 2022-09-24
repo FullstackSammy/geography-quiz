@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
             email: email,
             score: currentScore
         };
+        //Only checks if both inputs have value
         if (userName === "" || email === "") {
             alert('Please type a username and email');
         } else {

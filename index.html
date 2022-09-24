@@ -11,7 +11,7 @@
 
 <body>
     <h1 class="heading"><a href="index.html">Capitals Quiz</a></h1>
-    <p id="info" class="info-text">There are 10 questions you need to answer. <br>They are all about capitals of
+    <p id="info" class="info-text hide">There are 10 questions you need to answer. <br>They are all about capitals of
         the world.
         <br>Click "start" to begin</p>
     <div class="row">
@@ -31,20 +31,21 @@
     </div>
     <div class="row">
         <div class="control-btn col-12">
-            <button id="start-btn" class="nav-btn">Start</button>
+            <button id="start-btn" class="nav-btn hide">Start</button>
             <button id="next-btn" class="nav-btn hide">Next</button>
             <button id="result-btn" class="nav-btn hide">Results</button>
         </div>
     </div>
-    <div id="results-box" class="reg-box col-12 hide">
+    <div id="results-box" class="reg-box col-12">
         <div id="finalScore"></div>
         <form>
-            <input type="text" name="username" id="username" placeholder="name">
-            <input type="email" name="email_address" id="email" placeholder="email">
-            <button type="button" id="send">Send my score</button>
+            <input type="text" name="username" id="username" class="form" placeholder="Name">
+            <input type="email" name="email_address" id="email" class="form "placeholder="Email"><br>
+            <button type="button" id="send" class="send-btn">Send my score</button>
         </form>
         <a class="form-btn" href="index.html">Play Again</a>
     </div>
+    <!--Script for email form. Taken from (https://emailjs.com)-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
