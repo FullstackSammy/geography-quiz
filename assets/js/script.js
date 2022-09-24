@@ -232,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startButton.addEventListener("click", startGame);
 
+    //Sends out an email to the user.
     sendButton.addEventListener("click", () => {
         const userName = document.getElementById("username").value;
         const email = document.getElementById("email").value;
