@@ -55,20 +55,9 @@ The Result box is the last thing showing of the page. It contains different feat
 ![image of the results box](assets/images/results-box.jpg) 
 
 ## **Bugs & Fixes**
-
-
-
-
-
-
-
-
-
-
-
-
-
-bugs and fixes.
 I had an error where my background-image didn't now show in my deployed project on GitHub. fixed it by writing "background-image: url(../images/background.jpg);" instead of "background-image: url(/assets/images/background.jpg);"
 
-another bug I encountered were that the questionCounter function continued to count down below zero even when the game was restarted. I 
+another bug I encountered were that the view height for iPad Mini where cropped of. I fixed it by changing the bodys viewheight on media query `@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        height: 100vh;
+    }` 
