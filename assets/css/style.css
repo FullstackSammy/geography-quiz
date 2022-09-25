@@ -37,7 +37,7 @@ body {
     min-height: 100%;
     font-family: 'Bungee spice', sans-serif;
     color: orange;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 
@@ -278,6 +278,7 @@ body {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .heading {
         margin-bottom: 10%;
+        padding: 0 5px 0 5px;
     }
 
     .info-text {

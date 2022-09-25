@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     correct: false
                 },
                 {
-                    text: "Buenos Aires",
+                    text: "Medellin",
                     correct: false
                 },
                 {
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startButton.addEventListener("click", startGame);
 
-    //Sends out an email to the user using (https://www.emailjs.com).
+    //Sends out an email to the user using a template from (https://www.emailjs.com).
     sendButton.addEventListener("click", () => {
         const userName = document.getElementById("username").value;
         const email = document.getElementById("email").value;
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             emailjs.send("service_ie8ap9o", "template_xcpz6ol", templateParams, "R6A6UlPYHLb2KXBMs").
         then(function() {
-            alert('Email with Highscore sent to your email!');
+            alert('Email with score was sent!');
             document.getElementById("username").value = "";
             document.getElementById("email").value = "";
          }, function(error) {
