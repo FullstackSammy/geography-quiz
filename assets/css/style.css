@@ -312,7 +312,7 @@ body {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
-        height: 700px;
+        height: 950px;
     }
 
     .hs-box {
@@ -343,7 +343,7 @@ body {
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
-        height: 900px;
+        height: 100vh;
     }
 
     .heading {
@@ -394,7 +394,7 @@ body {
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
     body {
-        height: 900px;
+        height: 100vh;
     }
 
     .heading {
@@ -501,6 +501,5 @@ body {
         margin-top: 2%;
         font-size: 15px;
     }
-
 
 }
