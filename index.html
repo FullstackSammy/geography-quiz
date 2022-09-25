@@ -8,15 +8,33 @@
     <meta name="description" content="A Quiz site, that tests your knowledge of the Capitals of the World!">
     <meta name="keywords" content="Quiz, geography, Capitals, Cities, Countries, Continents">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
     <title>Capitals Quiz</title>
 </head>
 
 
 <body>
+    <div class="row">
+        <div class=" links col-12">
+            <ul>
+                <li>
+                    <a href="https://github.com/FullstackSammy" target="_blank"
+                        aria-label="external link that will take you to my Github"><i
+                            class="fa-brands fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/samuel-n%C3%A4sstr%C3%B6m-15563620a/" target="_blank"
+                        aria-label="external link that will take you to our instagram"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+    </div>
+        </div>
     <!--This is the heading of the page and it links to the index.html file-->
     <h1 class="heading"><a href="index.html">Capitals Quiz</a></h1>
 
-    <p id="info" class="info-text" aria-label="information text about the game.">Welcome! Test your geography knowledge in this Capitals Quiz!<br>
+    <p id="info" class="info-text" aria-label="information text about the game.">Welcome! Test your geography knowledge
+        in this Capitals Quiz!<br>
         <br>Click "start" to begin</p>
     <div class="row">
         <!--This is the main game-box. Which displays the questions and answers-->
@@ -48,7 +66,7 @@
         <!--The email form-->
         <form>
             <input type="text" name="username" id="username" class="form" placeholder="Name">
-            <input type="email" name="email_address" id="email" class="form "placeholder="Email"><br>
+            <input type="email" name="email_address" id="email" class="form " placeholder="Email"><br>
             <button type="button" id="send" class="send-btn">Send my score</button>
         </form>
         <a class="form-btn" href="index.html">Play Again</a>
@@ -63,4 +81,5 @@
     </script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameBox = document.getElementById("game-box");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
-    
+
 
     // This Array contains the questions and answers for the game.
     const questions = [{
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     });
-    
+
     nextButton.addEventListener("click", () => {
         currentQuestion++;
         setQuestion();
@@ -248,13 +248,13 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Please type a username and email');
         } else {
             emailjs.send("service_ie8ap9o", "template_xcpz6ol", templateParams, "R6A6UlPYHLb2KXBMs").
-        then(function() {
-            alert('Email with score was sent!');
-            document.getElementById("username").value = "";
-            document.getElementById("email").value = "";
-         }, function(error) {
-            alert('FAILED...', error);
-         });
+            then(function () {
+                alert('Email with score was sent!');
+                document.getElementById("username").value = "";
+                document.getElementById("email").value = "";
+            }, function (error) {
+                alert('FAILED...', error);
+            });
         }
     })
 

@@ -17,27 +17,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: none;
-    overflow: hidden;
-}
-
-html {
-    height: max-content;
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*Body styling, including standard font-family, background image etc.*/
 body {
     /*Image is totally free for usage and taken from (https://unsplash.com/photos/Q1p7bh3SHj8)*/
     background: url(../images/background.jpg) no-repeat, center center;
-    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;
+    height: 900px;
     font-family: 'Bungee spice', sans-serif;
     color: orange;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -95,11 +86,27 @@ body {
 .col-12 {
     width: 100%;
 }
+/*Link icons on the top of the page*/
+.links {
+    position: fixed bottom;
+    width: 70%;
+    margin: 1% 0 0 15%;
+    text-align: center;
+}
+
+.links li {
+    display: inline;
+    margin: 2%;
+}
+
+.links a {
+    color: orangered;
+}
 
 /*The heading text*/
 .heading {
     width: 100%;
-    margin: 5% 0 5% 0;
+    margin: 1% 0 5% 0;
     padding: 0 15px 0 15px;
     font-size: 40px;
     text-align: center;
@@ -112,6 +119,7 @@ body {
 .heading a {
     text-decoration: none;
 }
+
 /*The information text*/
 .info-text {
     width: 100%;
@@ -274,8 +282,14 @@ body {
     display: none;
 }
 
+
+
 /*Media querys for responsiveness*/
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        height: 100vh;
+    }
+
     .heading {
         margin-bottom: 10%;
         padding: 0 5px 0 5px;
@@ -297,7 +311,10 @@ body {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  
+    body {
+        height: 700px;
+    }
+
     .hs-box {
         margin-top: 2%;
     }
@@ -325,9 +342,13 @@ body {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+
     .heading {
         font-size: 50px;
-        margin: 2% 0 3% 0%;
+        margin: 1% 0 3% 0%;
 
     }
 
@@ -342,7 +363,7 @@ body {
     .form-btn {
         font-size: 25px;
     }
-    
+
     .send-btn {
         font-size: 15px;
     }
@@ -372,6 +393,9 @@ body {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        height: 900px;
+    }
 
     .heading {
         font-size: 50px;
@@ -388,7 +412,7 @@ body {
     .form-btn {
         font-size: 25px;
     }
-    
+
     .send-btn {
         font-size: 13px;
     }
@@ -420,6 +444,13 @@ body {
 }
 
 @media only screen and (min-width: 1201px) {
+    body {
+        height: 100vh;
+    }
+    * {
+        overflow: hidden;
+    }
+
     .heading {
         margin: 2% 0 5% 0;
         font-size: 50px;
@@ -429,14 +460,14 @@ body {
         font-size: 20px;
     }
 
-    .form{
+    .form {
         font-size: 20px;
     }
 
     .form-btn {
         font-size: 25px;
     }
-    
+
     .send-btn {
         font-size: 13px;
     }
@@ -472,6 +503,6 @@ body {
     }
 
     /*Specific media queries*/
-    
+
 
 }
