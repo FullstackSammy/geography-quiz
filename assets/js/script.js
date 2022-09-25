@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.getElementById("next-btn");
     const sendButton = document.getElementById("send");
     const resultButton = document.getElementById('result-btn');
-    const resultBox = document.getElementById("results-box")
+    const resultBox = document.getElementById("results-box");
     const gameBox = document.getElementById("game-box");
     const questionEl = document.getElementById("question");
     const answerButtons = document.getElementById("answers");
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sendButton.addEventListener("click", () => {
         const userName = document.getElementById("username").value;
         const email = document.getElementById("email").value;
-        const currentScore = document.getElementById('score').innerText
+        const currentScore = document.getElementById('score').innerText;
         var templateParams = {
             username: userName,
             email: email,
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert('FAILED...', error);
             });
         }
-    })
+    });
 
     //declaring the two variables, so I can assign them in the functions later
     let questionsRandom, currentQuestion;
@@ -339,7 +339,6 @@ document.addEventListener("DOMContentLoaded", function () {
         //This if statement checks if there are any questions left. there is, keep clicking next. if not. show startButton and change its text to "restart".
         if (questionsRandom.length > currentQuestion + 1) {
             nextButton.classList.remove("hide");
-            localStorage.setItem('currentScore', score);
         } else {
             resultButton.classList.remove('hide');
         }
@@ -402,5 +401,5 @@ document.addEventListener("DOMContentLoaded", function () {
             Maybe Study a bit more?
             Fill out the form below and get an email with your score!`;
         }
-    };
+    }
 });

@@ -54,10 +54,24 @@ The Result box is the last thing showing of the page. It contains different feat
 
 ![image of the results box](assets/images/results-box.jpg) 
 
-## **Bugs & Fixes**
+### **Bugs & Fixes**
 I had an error where my background-image didn't now show in my deployed project on GitHub. fixed it by writing "background-image: url(../images/background.jpg);" instead of "background-image: url(/assets/images/background.jpg);"
 
 another bug I encountered were that the view height for iPad Mini where cropped of. I fixed it by changing the bodys viewheight on media query `@media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
         height: 100vh;
     }` 
+
+### **Testing**
+## **HTML**
+- I tested the HTML code of my project on [W3C HTML validator](https://validator.w3.org/nu/) and found no errors.
+
+## **CSS**
+I tested my CSS code on [W3C CSS validator](https://jigsaw.w3.org/css-validator/) and found no errors.
+
+## **JavaScript**
+- I tested my JavaScript code on [beautifytools](https://beautifytools.com/javascript-validator.php) and found no errors. There were a warning though:
+    - Said that emailjs in my addEventListener for the sendButton was not defined. But that is code used with the EMAILJS template. So I ignored it. 
+
+    
+

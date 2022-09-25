@@ -88,7 +88,6 @@ body {
 }
 /*Link icons on the top of the page*/
 .links {
-    position: fixed bottom;
     width: 70%;
     margin: 1% 0 0 15%;
     text-align: center;
