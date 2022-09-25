@@ -9,7 +9,7 @@ This is site is a quiz game for any geography nerd out there. It focuses on the 
 ### **Heading**
 On the top of the site, you will find the heading. Which concists of:
 - Links to the Github repository and my Linkedin profile
-- The title of the site.
+- The title of the site (when clicked, refreshes the site).
 
 ![heading part of the site](assets/images/heading.jpg) 
  
@@ -17,12 +17,12 @@ On the top of the site, you will find the heading. Which concists of:
 ### **The information text**
 - Quick information on what the game is about and what you need to do to start the game.
 
-![heading part of the site](assets/images/info-text.jpg) 
+![info about the game](assets/images/info-text.jpg) 
 
 ### **The Start Button**
 - The start button starts the game when clicked.
 
-![heading part of the site](assets/images/start.jpg) 
+![start button](assets/images/start.jpg) 
 
 ### **The Game Box**
 This game box shows up after you click start button. it contains:
@@ -34,7 +34,33 @@ This game box shows up after you click start button. it contains:
 
 The game box is responsive and when an answer is chosen, the colors of the answers will change to either red or green, reveiling the correct answer.
 
-![heading part of the site](assets/images/game-box.jpg) 
+![picture of game box](assets/images/game-box.jpg) 
+
+### **The Next Button**
+The next button shows up at the bottom of the page when you have chosen an answer and clicking it takes you to the next question of the game.
+
+![image of next button](assets/images/next.jpg) 
+
+### **The Results Button**
+The Results button shows up when all questions have been answered and the game is over. Clicking it will show the result box.
+
+![image of the results button](assets/images/results.jpg) 
+
+### **The Result Box**
+The Result box is the last thing showing of the page. It contains different features, which are the following:
+- Finalscore text (Contains your results, and information about the email form below it)
+- The Email form (if filled out, it sends you a thank you email with your score. Both fields are required or an alert will show.) and an alert will show once an email is sent.
+- The Play again button (if clicked, reloads the page and takes you back to the main section.)
+
+![image of the results box](assets/images/results-box.jpg) 
+
+## **Bugs & Fixes**
+
+
+
+
+
+
 
 
 
