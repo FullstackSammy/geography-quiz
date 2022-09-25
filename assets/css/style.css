@@ -17,20 +17,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+html {
+    height: max-content;
+    height: 100%;
+    min-height: 100%;
     overflow: hidden;
 }
 
 /*Body styling, including standard font-family, background image etc.*/
 body {
     /*Image is totally free for usage and taken from (https://unsplash.com/photos/Q1p7bh3SHj8)*/
-    background-image: url(../images/background.jpg);
+    background: url(../images/background.jpg) no-repeat, center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100%;
     font-family: 'Bungee spice', sans-serif;
     color: orange;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
@@ -109,6 +116,7 @@ body {
 .info-text {
     width: 100%;
     padding: 0 20px 0 20px;
+    margin-bottom: 5%;
     text-align: center;
     animation-name: hero-zoom;
     animation-duration: 3s;
@@ -118,6 +126,7 @@ body {
 /*The game-box where the questions and answers take place.*/
 .game-box {
     width: 70%;
+    font-size: 25px;
     height: fit-content;
     margin: 0 0 0 15%;
     background-color: rgba(2, 0, 0, 0.5);
@@ -126,13 +135,14 @@ body {
 .questions {
     font-family: 'Bungee spice', sans-serif;
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
     padding: 10px;
 }
 
 .answers-box {
     width: 70%;
     margin-left: 15%;
+    font-size: 25px;
 }
 
 /*Styling for the registerbox*/
@@ -162,6 +172,7 @@ body {
     color: black;
     font-size: 15px;
     border: 1px solid orangered;
+    line-height: 2px;
 }
 
 .form:hover {
@@ -215,7 +226,7 @@ body {
     width: 20%;
     margin: 2% 0 0 40%;
     font-family: 'Bungee', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 5%;
     padding: 5px;
     color: orangered;
@@ -269,28 +280,23 @@ body {
         margin-bottom: 10%;
     }
 
-    .hs-box {
-        margin-top: 2%;
-    }
-
     .info-text {
         margin-top: 10%;
     }
 
     .button {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .nav-btn {
-        font-size: 10px;
+        font-size: 15px;
+        width: 30%;
+        margin-left: 35%;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .heading {
-        margin-bottom: 10%;
-    }
-
+  
     .hs-box {
         margin-top: 2%;
     }
@@ -320,7 +326,8 @@ body {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .heading {
         font-size: 50px;
-        margin-bottom: 5%;
+        margin: 2% 0 3% 0%;
+
     }
 
     #finalScore {
@@ -462,5 +469,8 @@ body {
         margin-top: 2%;
         font-size: 15px;
     }
+
+    /*Specific media queries*/
+    
 
 }
