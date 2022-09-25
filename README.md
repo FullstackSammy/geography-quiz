@@ -4,6 +4,8 @@
 
 This is site is a quiz game for any geography nerd out there. It focuses on the Capital cities of the world. 10 questions needs to be answered and you will be able to recieve an email with the result of your game. Capitals Quiz is a one page site with beautiful background and color contrasts, that makes it inriguing to anyone who firsts arrives on the site. The page is fully responsive and fun to play. It gives you 4 alternatives per question and will show you whether they're right or wrong.
 
+![image of the responsive tests](assets/images/responsive.jpg) 
+
 ## **Features** 
 ---
 ### **Heading**
@@ -62,16 +64,58 @@ another bug I encountered were that the view height for iPad Mini where cropped 
         height: 100vh;
     }` 
 
-### **Testing**
-## **HTML**
+## **Testing**
+---
+### **HTML**
 - I tested the HTML code of my project on [W3C HTML validator](https://validator.w3.org/nu/) and found no errors.
 
-## **CSS**
+### **CSS**
 I tested my CSS code on [W3C CSS validator](https://jigsaw.w3.org/css-validator/) and found no errors.
 
-## **JavaScript**
+### **JavaScript**
 - I tested my JavaScript code on [beautifytools](https://beautifytools.com/javascript-validator.php) and found no errors. There were a warning though:
     - Said that emailjs in my addEventListener for the sendButton was not defined. But that is code used with the EMAILJS template. So I ignored it. 
 
-    
+### **Accessibility**
+- I have confirmed that this site is responsive, by using css grid layout and media queries to size it to different resolutions.
+
+- I have made sure it works on Chrome, Safari and Firefox. I have also tested the website on different physical devised and made sure the site works on them. These are:
+    - Iphone 13 pro
+    - Samsung Galaxy S21
+    - Samsung Galaxy S22
+
+- The form works as it's supposed to. I have used the template from [EmailJS](https://www.emailjs.com) and you can't recieve and email with your score unless you fill out all the required fields.
+I made sure that the colors I used are easy to read and go well together. and I tested it on lighthouse in devtools.
+
+![image of the lighthouse testing](assets/images/lighthouse.jpg) 
+
+## **Unfixed Bugs**
+---
+There are no unfixed bugs.
+
+## **Deployment**
+---
+The site is deployed to GitHub pages and to deploy it you need to do the following:
+- Go to your repositories and click on the one you want to deploy
+- Click the settings option
+- Choose "Pages" in the menu to the left
+- Choose "Deploy from a branch" and when choosing branch, choose the branch named "main"
+- Lastly, click the "save" button
+You can find the live link to my site [here](https://fullstacksammy.github.io/geography-quiz/).
+
+## **Credits**
+---
+### **Content**
+This are the credits for code usage:
+- The email form template used by signing up on [EmailJS](https://www.emailjs.com). You sign up, make an email template and then you can use that in your code to send out emails. 
+- The animations used is taken from CI [Love running project](https://github.com/Code-Institute-Org/love-running-2.0).
+- The counters functions for the game, named "incrementScore" and "incrementQuestionCount" were both inspired by and borrowed from CI [Love Maths Project](https://github.com/Code-Institute-Org/love-maths).
+
+### **Media**
+All images used in this project were taken from the free image site [unsplash](https://www.unsplash.com).
+
+
+
+
+
 
